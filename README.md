@@ -21,7 +21,7 @@ This repository contains **standalone Python scripts** for simulating and visual
 <p align="center">
   <img src="https://github.com/user-attachments/assets/7c6637b6-dabb-41a8-8226-14cd19222be1" width="700">
 </p>
-<p align="center"><b>Simulation 3:</b> Hybrid Force controll on moving plane </p>
+<p align="center"><b>Simulation 3:</b> Hybrid Force control on moving plane </p>
 
 
 ---
