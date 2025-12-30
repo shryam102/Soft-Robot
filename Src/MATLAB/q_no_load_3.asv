@@ -1,0 +1,63 @@
+function q_0 = q_no_load_3(ell, n, d, Goal_coord)
+
+q_0 = zeros(3*n,1);
+
+ell_1 = ell(1);
+ell_2 = ell(2); 
+ell_3 = ell(3);
+
+phi_hypo = atan2(Goal_coord(2),Goal_coord(1));
+
+S = (ell_1 + ell_2 + ell_3)/3;
+
+
+if (abs(ell_1-ell_2) <= 0.001) && (abs(ell_2-ell_3)<=0.001)
+    phi = 0;
+
+    
+else
+    phi = atan2(sqrt(3) * (ell_2 + ell_3 - 2*ell_1), (3*(ell_2 - ell_3)));
+    kappa = 2*sqrt(ell_1^2 + ell_2^2 + ell_3^2 - ell_1 * ell_2 - ell_1*ell_3 - ell_2*ell_3)/(d*(ell_1 + ell_2 + ell_3));
+    theta = S * kappa;
+    if phi < -0.01
+    phi = 2*pi - abs(phi);
+    end
+end
+
+if (abs(ell_2 - ell_3) <= 0.3) && (abs(ell_2 + ell_3 - 2*ell_1) <= 0.3)
+    phi = min(max(phi, phi_hypo - (.1745/2)), phi_hypo+(.1745/2));
+end
+
+% if (abs(ell_2 + ell_3 - 2*ell_1) < 1e-4) && (ell_2 > ell_3)
+%     phi = 0;
+% elseif (abs(ell_2 + ell_3 - 2*ell_1) < 1e-4) && (ell_2 < ell_3)
+%     phi = pi;
+% 
+% elseif (abs(ell_2 - ell_3) < 1e-4) && (ell_2 + ell_3 > 2*ell_1)
+%     phi = pi/2;
+% 
+% elseif (abs(ell_2 - ell_3) < 1e-4) && (ell_2 + ell_3 < 2*ell_1)
+%     phi = 3*pi/2;
+% 
+% 
+% 
+% end
+% 
+% if (phi < 0) && (ell_2 < ell_3)
+%     phi = pi - abs(phi);
+% elseif (phi > 0) && (ell_2 < ell_3)
+%     phi = pi + abs(phi);
+% elseif (phi < 0) && (ell_2 + ell_3 < 2*ell_1)
+%     phi = 2*pi - abs(phi);
+% 
+% end
+
+
+
+
+for i = 1:3:3*n
+    q_0(i) = phi;
+    q_0(1 + i) = theta/n;
+    q_0(2 + i) = S/n;
+end
+end
