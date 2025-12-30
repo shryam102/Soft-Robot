@@ -1,4 +1,4 @@
-# SBA Robot Simulation Demos (Python)
+# SBA Robot Simulation Demos 
 
 This repository contains **standalone Python scripts** for simulating and visualizing an SBA (Soft Bending Actuator) robot using a **Quasi Static Dynamic Model with Constant Curvature Approach**.
 
@@ -31,4 +31,5 @@ This repository contains **standalone Python scripts** for simulating and visual
 Each demo is a **single self-contained Python file** (no repository imports). Just run:
 
 ```bash
-python demo_spiral.py
+python Close_loop_IK.py
+python Hybrid_force_Controller.py
