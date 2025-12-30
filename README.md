@@ -33,3 +33,7 @@ Each demo is a **single self-contained Python file** (no repository imports). Ju
 ```bash
 python Close_loop_IK.py
 python Hybrid_force_Controller.py
+
+
+### 📜 License
+Released under the [MIT License](./LICENSE).
