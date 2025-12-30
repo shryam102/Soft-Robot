@@ -1,18 +1,27 @@
-# MATLAB Simulation for the SBA Robot
+# SBA Robot Simulation Demos (Python)
 
-This repository contains MATLAB files for simulating the **SBA Robot**.
+This repository contains **standalone Python scripts** for simulating and visualizing an SBA (Soft Bending Actuator) robot using a **reduced-order constant-curvature model**.
 
-## 🚀 Current Development
+> ⚠️ Note: Mathematical derivations and detailed theoretical analysis are intentionally omitted due to ongoing publication.
 
-### ✅ Completed Features:
-- **Forward Kinematics** for the **Constant Curvature Curve Model**
-- **General Inverse Kinematics** for curve parameters
-- **Plotting and Path Following:**
-  - Implemented a **fixed path** (Spiral)
-  - Using a **basic potential gradient-based method**
+---
 
-### 🔧 Ongoing Work:
-- Developing a **dynamic model** similar to a **revolute-link (spring)-revolute** pair
-- Simulating a **small dynamic model** of an **extendible link**:
-  - Attached to a **revolute joint** at the base
-  - Experiencing external **forces and impulses**
+## 🎬 Demos (Preview)
+
+<p align="center">
+  <img src="![Simulation_1](https://github.com/user-attachments/assets/5c6113a3-f14d-4f8d-a210-41d8b06e25ce)
+" width="280">
+  <img src="![Simulation_2](https://github.com/user-attachments/assets/450ef6a4-0e31-4a90-b586-81fa501325c1)
+" width="280">
+  <img src="![Simulation_3](https://github.com/user-attachments/assets/7c6637b6-dabb-41a8-8226-14cd19222be1)
+" width="280">
+</p>
+
+---
+
+## 🚀 Quick Run (No Setup)
+
+Each demo is a **single self-contained Python file** (no repository imports). Just run:
+
+```bash
+python demo_spiral.py
